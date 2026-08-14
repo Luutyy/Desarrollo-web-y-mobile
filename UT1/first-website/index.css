@@ -34,6 +34,7 @@ caption {
   padding: 10px;
 }
 
+<<<<<<< HEAD:first-website/index.css
 .outer {
   border:5px solid black;
 }
@@ -59,3 +60,15 @@ caption {
     transform: rotate(0.4turn);
   }
 }
+=======
+.cajita {
+  background-color:red;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+}
+
+.padding-ejemplo {
+  text-align:center;
+}
+>>>>>>> e3dcde61f84acaf6c000ee9a477c88ea00ffdeb4:UT1/first-website/index.css
