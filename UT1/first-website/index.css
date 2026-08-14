@@ -33,3 +33,14 @@ tr:nth-child(odd) td {
 caption {
   padding: 10px;
 }
+
+.cajita {
+  background-color:red;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+}
+
+.padding-ejemplo {
+  text-align:center;
+}
