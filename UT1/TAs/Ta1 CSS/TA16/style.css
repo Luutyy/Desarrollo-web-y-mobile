@@ -1,0 +1,33 @@
+body {
+  background-color: red;
+}
+p {
+  font-size: 24px;
+}
+img {
+  width: 50%;
+}
+
+@media (width < 768px) {
+  body {
+    background-color: green;
+  }
+  p {
+    font-size: 18px;
+  }
+  img {
+    width: 70%;
+  }
+}
+
+@media (width < 425px){
+  body {
+    background-color: blue;
+  }
+  p {
+    font-size: 14px;
+  }
+  img {
+    width: 100%;
+  }
+}
