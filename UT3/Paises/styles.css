@@ -1,0 +1,29 @@
+#paises {
+    display: flex;
+    flex-direction: row;
+}
+
+#americaDiv, #asiaDiv, #polarDiv, #europaDiv, #oceaniaDiv {
+    flex-direction: column;
+    width: 20%;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 9px;
+    box-sizing: border-box;
+}
+img {
+    border-radius: 5px;
+    border: 0.5px solid black;
+    width: 100%;
+}
+p {
+    font-family:sans-serif;
+    text-decoration:underline 1px solid black;
+}
+
+.unPais {
+    text-align: center;
+    border-top: 1px solid black;
+    justify-content: center;
+
+}
