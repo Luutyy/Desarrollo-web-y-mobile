@@ -1,0 +1,105 @@
+@font-face {
+  font-family: 'Rufina';
+  src: url('./assets/fonts/Rufina-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+body {
+  font-family: 'Rufina';
+  margin:0;
+}
+
+.encabezado {
+  background-color: #f2d700;
+  font-family: 'Rufina';
+  display:grid;
+  text-align: center;
+  grid-template-columns: repeat(5, 1fr);
+  align-items:center;
+  gap:24px;
+}
+
+.encabezadoTexto{
+  text-align:center;
+  color: rgb(190, 15, 15);
+  grid-column-start: 1;
+  grid-column-end:4;
+}
+.encabezadoTexto h1 {
+  font-size: 3.2rem;
+  font-weight: bold;
+  line-height: 1.1;
+  margin: 0 0 16px 0;
+}
+.encabezadoTexto p {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+#logo {
+  width: 500px;
+  height:auto;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width:80%;
+  margin: 100px auto;
+}
+.cardTitle {
+  text-align: center;
+  font-size: 4.5em;
+  padding:0px;
+  margin:0px;
+}
+.cardDescription {
+  text-align: center;
+  font-size:1.2em;
+  padding:0px;
+  color:#444;
+  margin-bottom: 50px;
+}
+
+.opciones {
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+.imagen {
+  grid-row-start: 1;
+  grid-row-end: 4;
+  width: 60%;
+  justify-self:center;
+}
+.imagen.walter {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+.opcion {
+  border-top: 3px;
+  border-top-style: dotted;
+  position:relative;
+  grid-column-start:2 ;
+  grid-column-end:3 ;
+}
+.opcion.walter {
+  border-top: 3px;
+  border-top-style: dotted;
+  grid-column-start:1 ;
+  grid-column-end:2 ;
+}
+.titulo {
+  font-size: 2.8em;
+}
+.descripcion {
+  font-size:1.2em;
+  color:#555
+}
+
+.price {
+  font-size:2em;
+  position:absolute;
+  top: -70px;
+  right: 0px;
+}

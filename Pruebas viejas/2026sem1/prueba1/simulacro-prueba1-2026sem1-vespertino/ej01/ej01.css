@@ -1,0 +1,88 @@
+/* 
+  Reemplazar este código CSS con los estilos necesarios.
+*/
+body {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  margin:0px;
+  padding:0px;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+}
+
+.contenedor {
+  border: 2px solid black;
+  border-radius: 15px;
+  width: 97%;
+  display:flex;
+  flex-direction: column;
+  margin-bottom:10px;
+  text-align: center;
+  margin-top:10px;
+}
+
+.menues {
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap:10px;
+  margin:10px;
+}
+
+.menu {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 750px;
+  margin:10px;
+  border-radius: 20px;
+}
+
+.footer {
+  display:flex;
+  justify-content: space-between;
+}
+.header {
+  display:flex;
+  justify-content: space-between;
+}
+
+.foto {
+  font-size:5em;
+}
+.pais {
+  font-size:1.8em;
+  margin-top:20px;
+  margin-right:20px;
+}
+
+.comida {
+  min-width:0;
+  flex:1;
+  font-size:1.8em;
+  text-align: left;
+}
+.descripcion {
+  min-width:0;
+  flex:1;
+  text-align: end;
+  font-size: 1.6em;
+}
+
+.menu.impar {
+  border: 2px solid black;
+}
+
+.final {
+  margin:10px 40px 10px 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  
+}

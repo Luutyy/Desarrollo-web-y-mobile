@@ -27,19 +27,21 @@ function fetchAsia(){
     fetch('https://countries.dev/countries')
     .then((response)  => response.json())
     .then((data) => {
-        const contenedor = document.getElementById("asiaDiv");
+        const contenedor = document.getElementById("asiaPaises");
         
         for(const pais of data){
             if(pais.region == "Asia"){
                 console.log(pais)
+                let div = document.createElement("div");
                 let p = document.createElement("p");
                 let img = document.createElement("img");
+                div.className = "unPais"
                 img.src = `${pais.flags.svg}`
-                img.width = 100;
+                //img.width = 100;
                 p.textContent = `${pais.alpha2Code}: ${pais.name}`;
-                contenedor.appendChild(p)
-                contenedor.appendChild(img)
-                
+                div.appendChild(p);
+                div.appendChild(img);
+                contenedor.appendChild(div)   
             }
         }
     }

@@ -1,0 +1,59 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Alice",
+      "role": "Admin",
+      "email": "alice@example.com"
+    },
+    {
+      "id": "2",
+      "name": "Bob",
+      "role": "Editor",
+      "email": "bob@example.com"
+    },
+    {
+      "id": "3",
+      "name": "Cara",
+      "role": "Viewer",
+      "email": "cara@example.com"
+    },
+    {
+      "name": "safd",
+      "email": "afsd",
+      "role": "Admin",
+      "id": "yr3vZdzdNsg"
+    },
+    {
+      "name": "",
+      "email": "",
+      "role": "Admin",
+      "id": "_WXD-prpT8Y"
+    },
+    {
+      "name": "",
+      "email": "",
+      "role": "Admin",
+      "id": "2bf7qgguAI8"
+    },
+    {
+      "id": "a-ihW8zDgaI",
+      "name": "",
+      "email": "",
+      "role": "Admin"
+    },
+    {
+      "id": "xOXMQR0-fVY",
+      "name": "",
+      "email": "",
+      "role": "Admin"
+    },
+    {
+      "id": "QLV_13v_W4w",
+      "name": "",
+      "email": "",
+      "role": "Admin"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

@@ -1,0 +1,53 @@
+{
+  "combos": [
+    {
+      "body": "#f5073a",
+      "texto": "#46966d",
+      "aprobado": true,
+      "id": "GCTAuU2QXY0"
+    },
+    {
+      "body": "#0c18ca",
+      "texto": "#e5d41b",
+      "aprobado": true,
+      "id": "IP8GGx11pz8"
+    },
+    {
+      "body": "#e14eac",
+      "texto": "#41abb9",
+      "aprobado": true,
+      "id": "CpMBcFCqN2E"
+    },
+    {
+      "body": "#4f0847",
+      "texto": "#9af3a2",
+      "aprobado": true,
+      "id": "A92kgYdxLKc"
+    },
+    {
+      "body": "#032de9",
+      "texto": "#f3aae4",
+      "aprobado": true,
+      "id": "IOn23jaPZAU"
+    },
+    {
+      "body": "#b1012b",
+      "texto": "#c223c7",
+      "aprobado": false,
+      "id": "yFd5OhgvQNI"
+    },
+    {
+      "body": "#adc54d",
+      "texto": "#bcda93",
+      "aprobado": false,
+      "id": "1yArSgY1TU8"
+    },
+    {
+      "body": "#c4a4a6",
+      "texto": "#b3204f",
+      "aprobado": false,
+      "id": "nnOhVe0d1Hk"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

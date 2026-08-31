@@ -1,0 +1,117 @@
+@font-face {
+  font-family: 'Raleway';
+  src: url('./assets/fonts/Raleway-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+header {
+  display:flex;
+  flex-direction: row;
+  padding-bottom:60px;
+  font-family: 'Raleway';
+  border-bottom: 1px solid #888;
+}
+body {
+  font-family:'Raleway';
+  margin-top:75px;
+  margin-left:75px;
+  margin-right:75px;
+}
+#pfp {
+  height: 125px;
+  margin-right: 25px;
+  border-radius:80%;
+}
+#textoHeader {
+  margin:0px;
+}
+#titulo {
+  font-size: 1.4em;
+  margin-bottom:0px;
+  color:#666;
+}
+#nombre {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-top:0px;
+}
+.info {
+  display:grid;
+  grid-template-columns: 1fr;
+}
+.seccion {
+  display:grid;
+  grid-template-columns:1fr 1fr ;
+  border-bottom: 1px solid #888;
+}
+.perfil {
+  display:flex;
+  flex-direction: column;
+}
+
+ul {
+  padding-left: 20px
+}
+.subtitulo {
+  font-size: 1.4em;
+  padding-bottom: 0px;
+  margin-bottom: 20px;
+}
+.perfil > p {
+  color:#666;
+  padding-top:0px;
+  margin-top:0px;
+  margin-right: 250px
+}
+.contactos > ul > li {
+  color:#666;
+  padding-bottom:25px;
+}
+
+.educacion {
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+}
+.institucion {
+  padding-bottom:0px;
+  margin-bottom:0px
+}
+.fecha {
+  text-align: end;
+  padding-right:7%;
+  color:#666;
+}
+.descripcion {
+  color:#666;
+  padding-top:0px;
+  margin-top: 0px;
+}
+
+.experiencia {
+  border-bottom:1px solid #888;
+  padding-bottom:40px;
+  display:grid;
+}
+
+.trabajo {
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  margin:0px;
+  padding:0px;
+}
+.trabajo > ul > li {
+  color:#666;
+  padding-bottom:10px;
+}
+.trabajo > ul {
+  padding-top:0px;
+  padding-bottom:0px;
+  margin-top:0px;
+}
+.trabajo > .institucion {
+  margin-top:0px
+}
+.tecnologia{
+  width:75px;
+}
