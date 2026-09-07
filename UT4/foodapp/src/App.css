@@ -1,0 +1,45 @@
+body {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.titulo {
+  margin-left:50px;
+  color:rgb(91, 91, 215)
+}
+
+.contenedor {
+  display:flex;
+  flex-wrap: wrap;
+  flex-grow:1;
+  flex-shrink:1;
+  flex-basis:200px;
+  justify-content: space-around;
+}
+
+.cuerpo {
+  margin-left:2.5%;
+  display:flex;
+  flex-direction: row;
+}
+.imagen {
+  width:249px;
+}
+
+.carrito {
+  width: 50%;
+}
+
+.navbar {
+  border-bottom:1px solid rgb(91, 91, 215);
+  width: 95%; 
+
+}
+
+.pagina{  
+  justify-items: center;
+}
+.item {
+  border:1px solid black;
+  border-radius: 50px;
+  display:flex;
+}
