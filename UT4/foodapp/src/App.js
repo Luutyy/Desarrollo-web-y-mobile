@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
-import ContenedorItems from './components/ContenedorItems';
-import Navbar from './components/Navbar';
+import ContenedorItems from './components/contenedor/contenedorItems/ContenedorItems';
+import Navbar from './components/header/Navbar';
 
 function App() {
   const items = {

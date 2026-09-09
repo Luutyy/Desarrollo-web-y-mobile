@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-
+import './item.css'
 
 
 export default function Item({item}){
@@ -14,12 +14,19 @@ export default function Item({item}){
     )
 
     function agregarCompra(){
-        setStock((stock) + 1);
+        if(stock === item.stock){
+            return
+        } else {
+            setStock((stock) + 1);
+        }
         //return (
           //  <ItemCarrito></ItemCarrito>
     //    ) 
     }
     function sacarCompra(){
-        setStock((stock) - 1); 
+        if(stock !== 0) {
+            setStock((stock) - 1);
+        }
+         
     }
 }
