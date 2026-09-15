@@ -21,7 +21,7 @@ function showRandomDigit() {
   const f = document.getElementById('seg-f');
   const g = document.getElementById('seg-g');
   
-  const random = Math.floor(Math.random() * 9) + 1; // del 1 al 9
+  const random = Math.floor(Math.random() * 9) 
   switch(random){
     case 0:
       a.style.display = "block";

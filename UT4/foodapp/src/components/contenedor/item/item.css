@@ -1,0 +1,10 @@
+.item {
+  border:1px solid black;
+  border-radius: 50px;
+  display:flex;
+}
+
+.imagen {
+  width:249px; 
+  border-radius: 50px;
+}

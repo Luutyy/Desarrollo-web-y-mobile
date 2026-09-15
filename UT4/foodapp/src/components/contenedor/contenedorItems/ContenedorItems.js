@@ -1,5 +1,7 @@
 import React from 'react'
-import Item from './Item';
+import Item from '../item/Item';
+import './contenedorItems.css'
+
 
 export default function ContenedorItems({items}){
     return(

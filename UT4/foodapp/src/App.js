@@ -1,8 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
+<<<<<<< HEAD
 import ContenedorItems from './components/ContenedorItems';
 import { useState } from 'react';
 import Navbar from './components/Navbar';
+=======
+import ContenedorItems from './components/contenedor/contenedorItems/ContenedorItems';
+import Navbar from './components/header/Navbar';
+>>>>>>> 9758976a5270e608636094bb93482ab61e7baad5
 
 function App() {
 

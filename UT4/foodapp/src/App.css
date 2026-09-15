@@ -21,28 +21,30 @@ body {
   display:flex;
   flex-direction: row;
 }
+<<<<<<< HEAD
 .imagen {
   width:100%;
   
   border-radius: 50px;
 }
+=======
+
+>>>>>>> 9758976a5270e608636094bb93482ab61e7baad5
 
 .carrito {
   width: 50%;
 }
 
-.navbar {
-  border-bottom:1px solid rgb(91, 91, 215);
-  width: 95%; 
-
-}
 
 .pagina{  
   justify-items: center;
 }
+<<<<<<< HEAD
 .item {
   border:1px solid black;
   border-radius: 50px;
   display:flex;
   flex: 1 1 250px;
 }
+=======
+>>>>>>> 9758976a5270e608636094bb93482ab61e7baad5

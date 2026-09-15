@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-
+import './item.css'
 
 
 export default function Item({item}){
@@ -14,6 +14,7 @@ export default function Item({item}){
     )
 
     function agregarCompra(){
+<<<<<<< HEAD:UT4/foodapp/src/components/Item.js
         if (stock <= 0) return;
         setStock(stock - 1);
         onAgregar(item);
@@ -22,5 +23,21 @@ export default function Item({item}){
         if (stock >= item.stock) return; 
         setStock(stock + 1);
         onSacar(item);
+=======
+        if(stock === item.stock){
+            return
+        } else {
+            setStock((stock) + 1);
+        }
+        //return (
+          //  <ItemCarrito></ItemCarrito>
+    //    ) 
+    }
+    function sacarCompra(){
+        if(stock !== 0) {
+            setStock((stock) - 1);
+        }
+         
+>>>>>>> 9758976a5270e608636094bb93482ab61e7baad5:UT4/foodapp/src/components/contenedor/item/Item.js
     }
 }
