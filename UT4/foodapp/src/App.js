@@ -1,9 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
 import ContenedorItems from './components/ContenedorItems';
+import { useState } from 'react';
 import Navbar from './components/Navbar';
 
 function App() {
+
   const items = {
   productos: [
     {
@@ -44,14 +46,50 @@ function App() {
     }
   ]}
 
+  const [carrito, setCarrito] = useState([]);
+  
+  function agregarAlCarrito(producto){
+    setCarrito(carritoAnterior =>{
+      const existe = carritoAnterior.find(p => p.nombre === producto.nombre);
+      
+      if(existe){
+       return carritoAnterior.map(item => {
+        if(item.nombre === producto.nombre) {
+          return {
+            ...item,
+            cantidad:item.cantidad + 1
+          };
+        }
 
+        return item;
+       }); 
+      } else {
+        return [...carritoAnterior, {...producto, cantidad:1}];
+      }
+    })
+  }
+
+  function sacarDelCarrito(producto){
+    setCarrito(carritoAnterior => {
+      return carritoAnterior.map(item => {
+        if(item.nombre === producto.nombre){
+          return {
+            ...item,
+            cantidad: item.cantidad - 1
+          };
+        }
+      })
+      .filter(item => item.cantidad > 0)
+    })
+    
+  }
 
   return (
     <div className="pagina">
       <Navbar></Navbar>
       <div className="cuerpo">
-        <ContenedorItems items={items.productos}></ContenedorItems>
-        <div className="carrito">carrito jejeje</div>
+        <ContenedorItems items={items.productos} onAgregar={agregarAlCarrito} onSacar={sacarDelCarrito}></ContenedorItems>
+        <div items={carrito}>carrito jejeje</div>
       </div>
       
     </div>

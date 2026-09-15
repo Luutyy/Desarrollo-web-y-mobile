@@ -22,7 +22,9 @@ body {
   flex-direction: row;
 }
 .imagen {
-  width:249px;
+  width:100%;
+  
+  border-radius: 50px;
 }
 
 .carrito {
@@ -42,4 +44,5 @@ body {
   border:1px solid black;
   border-radius: 50px;
   display:flex;
+  flex: 1 1 250px;
 }

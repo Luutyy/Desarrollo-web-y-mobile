@@ -8,18 +8,19 @@ export default function Item({item}){
         <div className="item">
             <img className="imagen" src={item.imagen}></img>
             <p className="stock">{stock}</p>
-            <button className="boton" onClick={agregarCompra}>⬆️</button>
+            <button className="boton" onClick={agregarCompra} disabled={stock <= 0}>⬆️</button>
             <button className="boton" onClick={sacarCompra}>⬇️</button>
         </div>
     )
 
     function agregarCompra(){
-        setStock((stock) + 1);
-        //return (
-          //  <ItemCarrito></ItemCarrito>
-    //    ) 
+        if (stock <= 0) return;
+        setStock(stock - 1);
+        onAgregar(item);
     }
     function sacarCompra(){
-        setStock((stock) - 1); 
+        if (stock >= item.stock) return; 
+        setStock(stock + 1);
+        onSacar(item);
     }
 }
