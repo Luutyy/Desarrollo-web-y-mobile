@@ -17,6 +17,21 @@
     margin-bottom: 30px; 
 }
 
+.checkboxes input[type="checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #5b5bd7;
+    border-radius: 100px;
+    margin:auto;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.checkboxes input[type="checkbox"]:checked {
+    background-color: #5b5bd7;
+    
+}
+
 .region {
     display:flex;
     flex-direction: column;
@@ -50,3 +65,9 @@ p {
     justify-content: space-around;
     align-items: flex-start;
 }
+
+.paisBandera {
+    width: 500px;
+    margin:auto;
+}
+

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route, Link} from "react-router-dom";
 import Paises from "./components/Paises";
@@ -7,8 +7,12 @@ import './App.css';
 
 function App() {
   
+  let oscuro = true;
+  
+
   return (
     <div className="app">
+      
       <BrowserRouter>
         <div className="header">
           <ul>

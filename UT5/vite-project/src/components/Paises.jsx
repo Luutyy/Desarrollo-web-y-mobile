@@ -56,8 +56,10 @@ function Paises(){
                     .map((pais) => {
                         return(
                             <div key={pais.alpha2Code} className = "pais">
-                                <Link to={`/countries/${pais.alpha2Code}`}><p>{pais.alpha2Code}: {pais.name}</p></Link>
-                                <Link to={`/countries/${pais.alpha2Code}`}><img src={pais.flags.svg} width="100"></img></Link>
+                                <Link to={`/countries/${pais.alpha2Code}`}>
+                                    <p>{pais.alpha2Code}: {pais.name}</p>
+                                    <img src={pais.flags.svg} width="100"></img>
+                                </Link>
                             </div>
                         );
                     })

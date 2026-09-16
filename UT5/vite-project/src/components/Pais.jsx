@@ -20,11 +20,15 @@ function Pais() {
 
     return (
         <div>
-            <div>
-                <img src={pais.flags.svg}></img>
+            <div className="paisBandera">
+                <img width="100" src={pais.flags.svg}></img>
             </div>
             <div>
                 <h1>{pais.name}</h1>
+                <p>Capital: {pais.capital}</p>
+                <p>Region: {pais.region}</p>
+                <p>Densidad poblacional: {pais.populationDensity} h/km2</p>
+                <p>Latitud/longitud: {pais.latlng.join(" / ")}</p>
             </div>
         </div>
     );
