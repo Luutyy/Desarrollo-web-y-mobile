@@ -1,5 +1,5 @@
 import React, { useState, useEffect} from 'react'
-
+import { Link } from "react-router-dom";
 
 function Paises(){
     const [paises, setPaises] = useState([]);
@@ -25,27 +25,28 @@ function Paises(){
 
     return(
         <div className="paises">
-        <div className="checkboxes">
-            <div>
-                <input type="checkbox" value="Americas" onChange={manejarRegion}/> America
+            <div className="checkboxes">
+                <div>
+                    <input type="checkbox" value="Americas" onChange={manejarRegion}/> America
+                </div>
+
+                <div>
+                    <input value="Asia" type="checkbox" onChange={manejarRegion}/> Asia
+                </div>
+
+                <div>
+                    <input value="Polar" type="checkbox" onChange={manejarRegion}/> Polar
+                </div>
+
+                <div>
+                    <input value="Europe" type="checkbox" onChange={manejarRegion}/> Europa
+                </div>
+
+                <div>
+                    <input value="Oceania" type="checkbox" onChange={manejarRegion}/> Oceania
+                </div>
             </div>
-            
-            <div>
-                <input value="Asia" type="checkbox" onChange={manejarRegion}/> Asia
-            </div>
-            
-            <div>
-                <input value="Polar" type="checkbox" onChange={manejarRegion}/> Polar
-            </div>
-            
-            <div>
-                <input value="Europe" type="checkbox" onChange={manejarRegion}/> Europa
-            </div>
-            
-            <div>
-                <input value="Oceania" type="checkbox" onChange={manejarRegion}/> Oceania
-            </div>
-        </div>
+            <div className="regiones">
             {regiones.map((region) => {
                 return (
                     <div key={region} className="region">
@@ -55,8 +56,8 @@ function Paises(){
                     .map((pais) => {
                         return(
                             <div key={pais.alpha2Code} className = "pais">
-                                <p>{pais.alpha2Code}: {pais.name}</p>
-                                <img src={pais.flags.svg} width="100"></img>
+                                <Link to={`/countries/${pais.alpha2Code}`}><p>{pais.alpha2Code}: {pais.name}</p></Link>
+                                <Link to={`/countries/${pais.alpha2Code}`}><img src={pais.flags.svg} width="100"></img></Link>
                             </div>
                         );
                     })
@@ -64,6 +65,7 @@ function Paises(){
             </div>
         );
     })}
+    </div>
         </div>
 );
 }

@@ -8,18 +8,21 @@ import './App.css';
 function App() {
   
   return (
-    <div>
+    <div className="app">
       <BrowserRouter>
-        <ul>
-          <li><Link to="/countries">Ver paises</Link></li>
-          <li><Link to="/countries/URY">Ver Uruguay</Link></li>
-        </ul>
-
-        <Routes>
-          <Route path="/countries" element={ <Paises></Paises> }/>
-          <Route path="/countries/:cca" element={ <Pais></Pais> }/>
-        </Routes>
-      </BrowserRouter>
+        <div className="header">
+          <ul>
+            <li><Link to="/countries">Ver paises</Link></li>
+          </ul>
+        </div>
+        
+        <div className = "contenido">
+          <Routes>
+            <Route path="/countries" element={ <Paises></Paises> }/>
+            <Route path="/countries/:alpha2Code" element={ <Pais></Pais> }/>
+          </Routes>
+        </div>
+        </BrowserRouter>
     </div>
     
   )
