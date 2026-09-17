@@ -1,13 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
-<<<<<<< HEAD
-import ContenedorItems from './components/ContenedorItems';
-import { useState } from 'react';
-import Navbar from './components/Navbar';
-=======
 import ContenedorItems from './components/contenedor/contenedorItems/ContenedorItems';
 import Navbar from './components/header/Navbar';
->>>>>>> 9758976a5270e608636094bb93482ab61e7baad5
+import {useState } from 'react';
+import Carrito from './components/carrito/Carrito'
 
 function App() {
 
@@ -91,10 +87,10 @@ function App() {
 
   return (
     <div className="pagina">
-      <Navbar></Navbar>
+      <Navbar />
       <div className="cuerpo">
-        <ContenedorItems items={items.productos} onAgregar={agregarAlCarrito} onSacar={sacarDelCarrito}></ContenedorItems>
-        <div items={carrito}>carrito jejeje</div>
+        <ContenedorItems items={items.productos} onAgregar={agregarAlCarrito} onSacar={sacarDelCarrito} />
+        <Carrito items={carrito} />
       </div>
       
     </div>
