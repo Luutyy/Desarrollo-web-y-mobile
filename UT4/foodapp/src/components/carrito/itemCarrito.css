@@ -1,0 +1,40 @@
+.itemCarrito, .inicio, .final {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.imagenLista {
+    width:15%;
+    margin-left:4%;
+    margin-right:4%;
+    border-radius: 8px;
+}
+.cantidad, .precio {
+    font-size:22px;
+}
+
+.inicio {
+    justify-content: start;
+}
+
+
+.itemCarrito {
+    margin-bottom:0.7%;
+}
+
+.sacar {
+    padding:10px;
+    border:none;
+    color:red;
+    font-size:2em;
+    background-color: white;
+    
+    border-radius: 100px;
+
+}
+
+.sacar:hover {
+    border:1px solid red;
+    background-color: #faa;
+    transition: 0.3s;
+}

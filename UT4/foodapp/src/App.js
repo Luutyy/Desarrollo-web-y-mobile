@@ -49,21 +49,44 @@ function App() {
 
   const [carrito, setCarrito] = useState([]);
   
+  const productosConStock = items.productos.map(producto => {
+    const enCarrito = carrito.find(item => item.nombre === producto.nombre);
+    const cantidadEnCarrito = enCarrito ? enCarrito.cantidad : 0;
+    return {
+      ...producto,
+      stockDisponible: producto.stock - cantidadEnCarrito
+    };
+  });
+
+  function eliminar(producto){
+    setCarrito(carritoAnterior => {
+      return carritoAnterior.map(item => {
+        if(item.nombre === producto.nombre){
+          return {
+            ...item,
+            cantidad: 0
+          };
+        }
+        return item;
+      })
+      .filter(item => item.cantidad > 0)
+    })
+    
+  }
+
   function agregarAlCarrito(producto){
     setCarrito(carritoAnterior =>{
       const existe = carritoAnterior.find(p => p.nombre === producto.nombre);
-      
-      if(existe){
-       return carritoAnterior.map(item => {
-        if(item.nombre === producto.nombre) {
-          return {
-            ...item,
-            cantidad:item.cantidad + 1
-          };
-        }
+      const cantidadActual = existe ? existe.cantidad : 0;
 
-        return item;
-       }); 
+      if (cantidadActual >= producto.stock) return carritoAnterior; // no hay stock
+
+      if(existe){
+        return carritoAnterior.map(item =>
+          item.nombre === producto.nombre
+            ? { ...item, cantidad: item.cantidad + 1 }
+            : item
+        );
       } else {
         return [...carritoAnterior, {...producto, cantidad:1}];
       }
@@ -79,6 +102,7 @@ function App() {
             cantidad: item.cantidad - 1
           };
         }
+        return item;
       })
       .filter(item => item.cantidad > 0)
     })
@@ -89,8 +113,8 @@ function App() {
     <div className="pagina">
       <Navbar />
       <div className="cuerpo">
-        <ContenedorItems items={items.productos} onAgregar={agregarAlCarrito} onSacar={sacarDelCarrito} />
-        <Carrito items={carrito} />
+        <ContenedorItems items={productosConStock}   onAgregar={agregarAlCarrito} onSacar={sacarDelCarrito} />
+        <Carrito eliminar={eliminar} items={carrito} />
       </div>
       
     </div>

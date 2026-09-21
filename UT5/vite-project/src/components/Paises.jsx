@@ -1,9 +1,12 @@
-import React, { useState, useEffect} from 'react'
+import React, { useState, useEffect, useContext} from 'react'
 import { Link } from "react-router-dom";
+import { ThemeContext } from '../context/ThemeContext';
 
 function Paises(){
     const [paises, setPaises] = useState([]);
     const [regiones, setRegiones] = useState([])
+
+    const {modoOscuro} = useContext(ThemeContext);
 
     useEffect(x => {
         fetch("https://countries.dev/countries")
@@ -46,16 +49,16 @@ function Paises(){
                     <input value="Oceania" type="checkbox" onChange={manejarRegion}/> Oceania
                 </div>
             </div>
-            <div className="regiones">
+            <div className={modoOscuro ? "regiones oscuro" : "regiones"}>
             {regiones.map((region) => {
                 return (
-                    <div key={region} className="region">
+                    <div key={region} className={modoOscuro ? "region oscuro" : "region"}>
                         <h2>{region}</h2>
                     
                     {paises.filter((pais) => pais.region === region)
                     .map((pais) => {
                         return(
-                            <div key={pais.alpha2Code} className = "pais">
+                            <div key={pais.alpha2Code} className={modoOscuro ? "pais oscuro" : "pais"}>
                                 <Link to={`/countries/${pais.alpha2Code}`}>
                                     <p>{pais.alpha2Code}: {pais.name}</p>
                                     <img src={pais.flags.svg} width="100"></img>

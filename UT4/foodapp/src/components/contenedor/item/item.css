@@ -6,12 +6,23 @@
   padding:8px;
   position:relative;
   margin-bottom:10px;
+  height:250px;
 }
 
 .imagen {
   width:249px; 
   height: 249px;
   border-radius: 50px;
+}
+.imagen.agotado {
+  opacity: 0.5;
+}
+img + p.agotado {
+  position: absolute;
+  top:180px;
+  left:70px;
+  font-size: 1.5em;
+  opacity: 0.8;
 }
 
 .stock {
@@ -50,12 +61,14 @@
   grid-row-end: 8;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
+  background-color: #5c5a;
 }
 .boton.abajo {
   grid-row-start: 8;
   grid-row-end: 9;
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
+  background-color: #c55a;
 }
 
 .botonesStock {

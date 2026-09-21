@@ -1,12 +1,25 @@
+body {
+    margin: 0;
+    text-align: center;
+    font-family: 'Comic Sans MS';
+}
 .app {
     display:flex;
     flex-direction: column;
+    background: #ccc;
+    height:100vh;
 }
 
+.app.oscuro {
+    height:100vh;
+    background-color: #16171d;
+    color:#9ca3af;
+}
 
 .paises {
     display: flex;
     flex-direction: column;
+    
 }
 
 .checkboxes { 
@@ -38,9 +51,17 @@
     width: 20%;
     text-align: center;
     border: 1px solid black;
-    border-radius: 9px;
+    border-radius: 10px;
     box-sizing: border-box;
+    background: #efefef;
+
 }
+.region.oscuro {
+    border-color:#9ca3af;
+    background-color: #16171d;
+}
+
+
 img {
     border-radius: 5px;
     border: 0.5px solid black;
@@ -56,7 +77,13 @@ p {
     border-top: 1px solid black;
     justify-content: center;
     padding:10px;
+    background: #efefef;
 
+}
+
+.pais.oscuro {
+    border-color:#9ca3af;
+    background-color: #16171d;
 }
 
 .regiones {
@@ -64,6 +91,10 @@ p {
     flex-direction: row;
     justify-content: space-around;
     align-items: flex-start;
+    background: #ccc;
+}
+.regiones.oscuro {
+    background-color: #16171d;
 }
 
 .paisBandera {
@@ -71,3 +102,28 @@ p {
     margin:auto;
 }
 
+li {
+    list-style:none;
+    margin-bottom: 0
+}
+ul {
+    margin-top:20px;
+    padding:0;
+    margin-bottom: 0
+}
+
+button {
+    margin:20px;
+    border: 1px solid black;
+    border-radius: 30px;
+    padding:5px;
+    background-color: #5b5bd7;
+    color:#ccc;
+    font-weight: bold;
+}
+
+button.oscuro {
+    border: 1px solid #9ca3af;
+    background-color: #ccc;
+    color:#333;
+}
