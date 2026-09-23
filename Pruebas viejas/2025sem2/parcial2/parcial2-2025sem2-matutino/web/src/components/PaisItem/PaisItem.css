@@ -1,0 +1,9 @@
+.pais {
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+img {
+    width: 100px;
+    border-radius: 10px;
+}
